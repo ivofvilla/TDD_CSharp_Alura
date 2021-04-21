@@ -35,6 +35,9 @@ namespace Alura.LeilaoOnline.Core
 
         public void RecebeLance(Interessada cliente, double valor)
         {
+            if (valor < 0)
+                throw new System.ArgumentException("Valor do lance não pode ser negativo");
+
             if (NovoLanceAceito(cliente, valor))
             {
                 _lances.Add(new Lance(cliente, valor));
@@ -49,7 +52,10 @@ namespace Alura.LeilaoOnline.Core
 
         public void TerminaPregao()
         {
-            Estado = EstadoLeilao.LeilaoFinalizado;
+            if (Estado != EstadoLeilao.LeilaoEmAndamento)
+                throw new System.InvalidOperationException("Leilão não iniciado");
+
+                Estado = EstadoLeilao.LeilaoFinalizado;
             Ganhador = Lances
                         .DefaultIfEmpty(new Lance(null, 0))
                         .OrderBy(l => l.Valor)
