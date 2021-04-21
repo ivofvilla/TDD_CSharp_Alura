@@ -1,0 +1,10 @@
+C:\Users\Ivo\OneDrive\Área de Trabalho\Estudos\Alura.LeilaoOnline\Alura.LeilaoOnline.Console\bin\Debug\Alura.LeilaoOnline.Console.exe.config
+C:\Users\Ivo\OneDrive\Área de Trabalho\Estudos\Alura.LeilaoOnline\Alura.LeilaoOnline.Console\bin\Debug\Alura.LeilaoOnline.Console.exe
+C:\Users\Ivo\OneDrive\Área de Trabalho\Estudos\Alura.LeilaoOnline\Alura.LeilaoOnline.Console\bin\Debug\Alura.LeilaoOnline.Console.pdb
+C:\Users\Ivo\OneDrive\Área de Trabalho\Estudos\Alura.LeilaoOnline\Alura.LeilaoOnline.Console\bin\Debug\Alura.LeilaoOnline.Core.dll
+C:\Users\Ivo\OneDrive\Área de Trabalho\Estudos\Alura.LeilaoOnline\Alura.LeilaoOnline.Console\bin\Debug\Alura.LeilaoOnline.Core.pdb
+C:\Users\Ivo\OneDrive\Área de Trabalho\Estudos\Alura.LeilaoOnline\Alura.LeilaoOnline.Console\obj\Debug\Alura.LeilaoOnline.ConsoleApp.csprojAssemblyReference.cache
+C:\Users\Ivo\OneDrive\Área de Trabalho\Estudos\Alura.LeilaoOnline\Alura.LeilaoOnline.Console\obj\Debug\Alura.LeilaoOnline.ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Ivo\OneDrive\Área de Trabalho\Estudos\Alura.LeilaoOnline\Alura.LeilaoOnline.Console\obj\Debug\Alura.LeilaoOnline.ConsoleApp.csproj.CopyComplete
+C:\Users\Ivo\OneDrive\Área de Trabalho\Estudos\Alura.LeilaoOnline\Alura.LeilaoOnline.Console\obj\Debug\Alura.LeilaoOnline.Console.exe
+C:\Users\Ivo\OneDrive\Área de Trabalho\Estudos\Alura.LeilaoOnline\Alura.LeilaoOnline.Console\obj\Debug\Alura.LeilaoOnline.Console.pdb
