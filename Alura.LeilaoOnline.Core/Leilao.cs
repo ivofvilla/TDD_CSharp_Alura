@@ -14,17 +14,18 @@ namespace Alura.LeilaoOnline.Core
     {
         private Interessada _ultimoCliente = null;
         private IList<Lance> _lances;
+        private IModalidadeAvaliacao _avaliador { get; }
         public IEnumerable<Lance> Lances => _lances;
         public string Peca { get; }
         public Lance Ganhador { get; private set; }
         public EstadoLeilao Estado { get; private set; }
 
-
-        public Leilao(string peca)
+        public Leilao(string peca, IModalidadeAvaliacao avaliacao)
         {
             Peca = peca;
             _lances = new List<Lance>();
             Estado = EstadoLeilao.LeilaoAntesPegrao;
+            _avaliador = avaliacao;
         }
 
         private bool NovoLanceAceito(Interessada cliente, double valor)
@@ -35,9 +36,6 @@ namespace Alura.LeilaoOnline.Core
 
         public void RecebeLance(Interessada cliente, double valor)
         {
-            if (valor < 0)
-                throw new System.ArgumentException("Valor do lance não pode ser negativo");
-
             if (NovoLanceAceito(cliente, valor))
             {
                 _lances.Add(new Lance(cliente, valor));
@@ -55,11 +53,9 @@ namespace Alura.LeilaoOnline.Core
             if (Estado != EstadoLeilao.LeilaoEmAndamento)
                 throw new System.InvalidOperationException("Leilão não iniciado");
 
-                Estado = EstadoLeilao.LeilaoFinalizado;
-            Ganhador = Lances
-                        .DefaultIfEmpty(new Lance(null, 0))
-                        .OrderBy(l => l.Valor)
-                        .LastOrDefault();
+            Ganhador = _avaliador.Avalia(this);
+
+            Estado = EstadoLeilao.LeilaoFinalizado;
         }
     }
 }
